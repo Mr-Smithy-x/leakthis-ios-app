@@ -16,6 +16,17 @@
 		17AE4DE825414DCE007DDCE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17AE4DE625414DCE007DDCE2 /* LaunchScreen.storyboard */; };
 		17AE4DF325414DCE007DDCE2 /* LeakthisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AE4DF225414DCE007DDCE2 /* LeakthisTests.swift */; };
 		17AE4DFE25414DCF007DDCE2 /* LeakthisUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AE4DFD25414DCF007DDCE2 /* LeakthisUITests.swift */; };
+		17AE4E0E25414E2B007DDCE2 /* OAuth2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AE4E0D25414E2B007DDCE2 /* OAuth2.swift */; };
+		17AE4E1025414EBA007DDCE2 /* LeakThisUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AE4E0F25414EBA007DDCE2 /* LeakThisUser.swift */; };
+		17AE4E1225414F9A007DDCE2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AE4E1125414F9A007DDCE2 /* User.swift */; };
+		17AE4E1425414FF7007DDCE2 /* LeakThisProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AE4E1325414FF7007DDCE2 /* LeakThisProfile.swift */; };
+		17AE4E16254150B5007DDCE2 /* LeakThisForum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AE4E15254150B5007DDCE2 /* LeakThisForum.swift */; };
+		17AE4E18254151BF007DDCE2 /* LeakThisConversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AE4E17254151BF007DDCE2 /* LeakThisConversation.swift */; };
+		17AE4E1B254158BF007DDCE2 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AE4E1A254158BF007DDCE2 /* NavigationController.swift */; };
+		17AE4E1D2541590C007DDCE2 /* TabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AE4E1C2541590C007DDCE2 /* TabController.swift */; };
+		17AE4E232541599C007DDCE2 /* InboxController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AE4E222541599C007DDCE2 /* InboxController.swift */; };
+		17AE4E25254159A7007DDCE2 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AE4E24254159A7007DDCE2 /* ProfileController.swift */; };
+		17AE4E27254159B7007DDCE2 /* DashboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AE4E26254159B7007DDCE2 /* DashboardController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +62,17 @@
 		17AE4DF925414DCE007DDCE2 /* LeakthisUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeakthisUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		17AE4DFD25414DCF007DDCE2 /* LeakthisUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeakthisUITests.swift; sourceTree = "<group>"; };
 		17AE4DFF25414DCF007DDCE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17AE4E0D25414E2B007DDCE2 /* OAuth2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuth2.swift; sourceTree = "<group>"; };
+		17AE4E0F25414EBA007DDCE2 /* LeakThisUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeakThisUser.swift; sourceTree = "<group>"; };
+		17AE4E1125414F9A007DDCE2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		17AE4E1325414FF7007DDCE2 /* LeakThisProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeakThisProfile.swift; sourceTree = "<group>"; };
+		17AE4E15254150B5007DDCE2 /* LeakThisForum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeakThisForum.swift; sourceTree = "<group>"; };
+		17AE4E17254151BF007DDCE2 /* LeakThisConversation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeakThisConversation.swift; sourceTree = "<group>"; };
+		17AE4E1A254158BF007DDCE2 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		17AE4E1C2541590C007DDCE2 /* TabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabController.swift; sourceTree = "<group>"; };
+		17AE4E222541599C007DDCE2 /* InboxController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxController.swift; sourceTree = "<group>"; };
+		17AE4E24254159A7007DDCE2 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		17AE4E26254159B7007DDCE2 /* DashboardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +123,8 @@
 		17AE4DD725414DCC007DDCE2 /* Leakthis */ = {
 			isa = PBXGroup;
 			children = (
+				17AE4E1925415893007DDCE2 /* Controllers */,
+				17AE4E0B25414DE3007DDCE2 /* Models */,
 				17AE4DD825414DCC007DDCE2 /* AppDelegate.swift */,
 				17AE4DDA25414DCC007DDCE2 /* SceneDelegate.swift */,
 				17AE4DDC25414DCC007DDCE2 /* ViewController.swift */,
@@ -129,6 +153,71 @@
 				17AE4DFF25414DCF007DDCE2 /* Info.plist */,
 			);
 			path = LeakthisUITests;
+			sourceTree = "<group>";
+		};
+		17AE4E0B25414DE3007DDCE2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				17AE4E0C25414E16007DDCE2 /* Auth */,
+				17AE4E0F25414EBA007DDCE2 /* LeakThisUser.swift */,
+				17AE4E1125414F9A007DDCE2 /* User.swift */,
+				17AE4E1325414FF7007DDCE2 /* LeakThisProfile.swift */,
+				17AE4E15254150B5007DDCE2 /* LeakThisForum.swift */,
+				17AE4E17254151BF007DDCE2 /* LeakThisConversation.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		17AE4E0C25414E16007DDCE2 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				17AE4E0D25414E2B007DDCE2 /* OAuth2.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		17AE4E1925415893007DDCE2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				17AE4E1E25415940007DDCE2 /* Tabs */,
+				17AE4E1A254158BF007DDCE2 /* NavigationController.swift */,
+				17AE4E1C2541590C007DDCE2 /* TabController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		17AE4E1E25415940007DDCE2 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				17AE4E2125415965007DDCE2 /* Inbox */,
+				17AE4E202541595E007DDCE2 /* Profile */,
+				17AE4E1F25415954007DDCE2 /* Dashboard */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
+		17AE4E1F25415954007DDCE2 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				17AE4E26254159B7007DDCE2 /* DashboardController.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		17AE4E202541595E007DDCE2 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				17AE4E24254159A7007DDCE2 /* ProfileController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		17AE4E2125415965007DDCE2 /* Inbox */ = {
+			isa = PBXGroup;
+			children = (
+				17AE4E222541599C007DDCE2 /* InboxController.swift */,
+			);
+			path = Inbox;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,10 +351,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17AE4E1B254158BF007DDCE2 /* NavigationController.swift in Sources */,
+				17AE4E1D2541590C007DDCE2 /* TabController.swift in Sources */,
 				17AE4DDD25414DCC007DDCE2 /* ViewController.swift in Sources */,
+				17AE4E1025414EBA007DDCE2 /* LeakThisUser.swift in Sources */,
 				17AE4DD925414DCC007DDCE2 /* AppDelegate.swift in Sources */,
+				17AE4E18254151BF007DDCE2 /* LeakThisConversation.swift in Sources */,
+				17AE4E0E25414E2B007DDCE2 /* OAuth2.swift in Sources */,
+				17AE4E27254159B7007DDCE2 /* DashboardController.swift in Sources */,
+				17AE4E25254159A7007DDCE2 /* ProfileController.swift in Sources */,
 				17AE4DE325414DCC007DDCE2 /* Leakthis.xcdatamodeld in Sources */,
 				17AE4DDB25414DCC007DDCE2 /* SceneDelegate.swift in Sources */,
+				17AE4E232541599C007DDCE2 /* InboxController.swift in Sources */,
+				17AE4E1425414FF7007DDCE2 /* LeakThisProfile.swift in Sources */,
+				17AE4E16254150B5007DDCE2 /* LeakThisForum.swift in Sources */,
+				17AE4E1225414F9A007DDCE2 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
