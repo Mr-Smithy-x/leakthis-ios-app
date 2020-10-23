@@ -27,6 +27,12 @@
 		17AE4E232541599C007DDCE2 /* InboxController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AE4E222541599C007DDCE2 /* InboxController.swift */; };
 		17AE4E25254159A7007DDCE2 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AE4E24254159A7007DDCE2 /* ProfileController.swift */; };
 		17AE4E27254159B7007DDCE2 /* DashboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AE4E26254159B7007DDCE2 /* DashboardController.swift */; };
+		17AE4E2F2541E09A007DDCE2 /* ForumViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AE4E2D2541E09A007DDCE2 /* ForumViewCell.swift */; };
+		17AE4E362541FE21007DDCE2 /* ForumViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17AE4E352541FE21007DDCE2 /* ForumViewCell.xib */; };
+		17AE4E3925421FE6007DDCE2 /* ThreadForumViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AE4E3825421FE6007DDCE2 /* ThreadForumViewCell.swift */; };
+		17AE4E3B25422026007DDCE2 /* ThreadForumViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17AE4E3A25422026007DDCE2 /* ThreadForumViewCell.xib */; };
+		17AE4E3E25423EBC007DDCE2 /* LeakThisResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AE4E3D25423EBC007DDCE2 /* LeakThisResponse.swift */; };
+		17AE4E4025423F11007DDCE2 /* LeakThisPagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AE4E3F25423F11007DDCE2 /* LeakThisPagination.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +79,12 @@
 		17AE4E222541599C007DDCE2 /* InboxController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxController.swift; sourceTree = "<group>"; };
 		17AE4E24254159A7007DDCE2 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		17AE4E26254159B7007DDCE2 /* DashboardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardController.swift; sourceTree = "<group>"; };
+		17AE4E2D2541E09A007DDCE2 /* ForumViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForumViewCell.swift; sourceTree = "<group>"; };
+		17AE4E352541FE21007DDCE2 /* ForumViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForumViewCell.xib; sourceTree = "<group>"; };
+		17AE4E3825421FE6007DDCE2 /* ThreadForumViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadForumViewCell.swift; sourceTree = "<group>"; };
+		17AE4E3A25422026007DDCE2 /* ThreadForumViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThreadForumViewCell.xib; sourceTree = "<group>"; };
+		17AE4E3D25423EBC007DDCE2 /* LeakThisResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeakThisResponse.swift; sourceTree = "<group>"; };
+		17AE4E3F25423F11007DDCE2 /* LeakThisPagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeakThisPagination.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +135,7 @@
 		17AE4DD725414DCC007DDCE2 /* Leakthis */ = {
 			isa = PBXGroup;
 			children = (
+				17AE4E282541DE9A007DDCE2 /* Cells */,
 				17AE4E1925415893007DDCE2 /* Controllers */,
 				17AE4E0B25414DE3007DDCE2 /* Models */,
 				17AE4DD825414DCC007DDCE2 /* AppDelegate.swift */,
@@ -158,6 +171,7 @@
 		17AE4E0B25414DE3007DDCE2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				17AE4E3C25423EA1007DDCE2 /* Responses */,
 				17AE4E0C25414E16007DDCE2 /* Auth */,
 				17AE4E0F25414EBA007DDCE2 /* LeakThisUser.swift */,
 				17AE4E1125414F9A007DDCE2 /* User.swift */,
@@ -218,6 +232,34 @@
 				17AE4E222541599C007DDCE2 /* InboxController.swift */,
 			);
 			path = Inbox;
+			sourceTree = "<group>";
+		};
+		17AE4E282541DE9A007DDCE2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				17AE4E3725421FB8007DDCE2 /* Thread */,
+				17AE4E2D2541E09A007DDCE2 /* ForumViewCell.swift */,
+				17AE4E352541FE21007DDCE2 /* ForumViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		17AE4E3725421FB8007DDCE2 /* Thread */ = {
+			isa = PBXGroup;
+			children = (
+				17AE4E3825421FE6007DDCE2 /* ThreadForumViewCell.swift */,
+				17AE4E3A25422026007DDCE2 /* ThreadForumViewCell.xib */,
+			);
+			path = Thread;
+			sourceTree = "<group>";
+		};
+		17AE4E3C25423EA1007DDCE2 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				17AE4E3D25423EBC007DDCE2 /* LeakThisResponse.swift */,
+				17AE4E3F25423F11007DDCE2 /* LeakThisPagination.swift */,
+			);
+			path = Responses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,6 +368,8 @@
 			files = (
 				17AE4DE825414DCE007DDCE2 /* LaunchScreen.storyboard in Resources */,
 				17AE4DE525414DCE007DDCE2 /* Assets.xcassets in Resources */,
+				17AE4E3B25422026007DDCE2 /* ThreadForumViewCell.xib in Resources */,
+				17AE4E362541FE21007DDCE2 /* ForumViewCell.xib in Resources */,
 				17AE4DE025414DCC007DDCE2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -353,9 +397,12 @@
 			files = (
 				17AE4E1B254158BF007DDCE2 /* NavigationController.swift in Sources */,
 				17AE4E1D2541590C007DDCE2 /* TabController.swift in Sources */,
+				17AE4E2F2541E09A007DDCE2 /* ForumViewCell.swift in Sources */,
 				17AE4DDD25414DCC007DDCE2 /* ViewController.swift in Sources */,
 				17AE4E1025414EBA007DDCE2 /* LeakThisUser.swift in Sources */,
 				17AE4DD925414DCC007DDCE2 /* AppDelegate.swift in Sources */,
+				17AE4E3925421FE6007DDCE2 /* ThreadForumViewCell.swift in Sources */,
+				17AE4E3E25423EBC007DDCE2 /* LeakThisResponse.swift in Sources */,
 				17AE4E18254151BF007DDCE2 /* LeakThisConversation.swift in Sources */,
 				17AE4E0E25414E2B007DDCE2 /* OAuth2.swift in Sources */,
 				17AE4E27254159B7007DDCE2 /* DashboardController.swift in Sources */,
@@ -363,6 +410,7 @@
 				17AE4DE325414DCC007DDCE2 /* Leakthis.xcdatamodeld in Sources */,
 				17AE4DDB25414DCC007DDCE2 /* SceneDelegate.swift in Sources */,
 				17AE4E232541599C007DDCE2 /* InboxController.swift in Sources */,
+				17AE4E4025423F11007DDCE2 /* LeakThisPagination.swift in Sources */,
 				17AE4E1425414FF7007DDCE2 /* LeakThisProfile.swift in Sources */,
 				17AE4E16254150B5007DDCE2 /* LeakThisForum.swift in Sources */,
 				17AE4E1225414F9A007DDCE2 /* User.swift in Sources */,

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="R2M-ey-pH2">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -14,7 +14,7 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -25,46 +25,70 @@
         <!--Inbox-->
         <scene sceneID="vON-aN-0SO">
             <objects>
-                <viewController id="Jco-EU-hVp" customClass="InboxController" customModule="Leakthis" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Inbox" id="Jco-EU-hVp" customClass="InboxController" customModule="Leakthis" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="idO-0M-hB6">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <viewLayoutGuide key="safeArea" id="PVD-5j-a9A"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Inbox" id="pZl-WP-0Dn"/>
+                    <tabBarItem key="tabBarItem" title="Inbox" image="tray" catalog="system" selectedImage="tray" id="pZl-WP-0Dn">
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dfY-2g-WZF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2713" y="-296"/>
         </scene>
-        <!--Dashboard-->
+        <!--Forum-->
         <scene sceneID="0c7-R0-W5G">
             <objects>
-                <viewController id="ZQT-RP-xZ6" customClass="DashboardController" customModule="Leakthis" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Forum" interfaceStyle="dark" id="ZQT-RP-xZ6" customClass="DashboardController" customModule="Leakthis" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9At-Nl-Gp9">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PgQ-xw-BZK">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                                <color key="backgroundColor" red="0.063892988809999995" green="0.068139688150000002" blue="0.074909021359999994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="separatorColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="ZQT-RP-xZ6" id="Uff-4g-Ic9"/>
+                                    <outlet property="delegate" destination="ZQT-RP-xZ6" id="uhl-5N-Eo8"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PgQ-xw-BZK" firstAttribute="centerX" secondItem="9At-Nl-Gp9" secondAttribute="centerX" id="bZr-ah-ryu"/>
+                            <constraint firstItem="PgQ-xw-BZK" firstAttribute="bottom" secondItem="qfw-dV-CfZ" secondAttribute="bottom" id="gFl-rn-fdf"/>
+                            <constraint firstItem="PgQ-xw-BZK" firstAttribute="leading" secondItem="qfw-dV-CfZ" secondAttribute="leading" id="hja-GI-75l"/>
+                            <constraint firstItem="PgQ-xw-BZK" firstAttribute="top" secondItem="qfw-dV-CfZ" secondAttribute="top" id="kac-Ff-Fdb"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="qfw-dV-CfZ"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Dashboard" id="T4g-FP-MuG"/>
+                    <tabBarItem key="tabBarItem" title="Dashboard" image="house" catalog="system" selectedImage="house" id="T4g-FP-MuG">
+                        <color key="badgeColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="iTableView" destination="PgQ-xw-BZK" id="Tkn-tA-A91"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wbv-Pw-eoi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2712" y="-937"/>
+            <point key="canvasLocation" x="2711.594202898551" y="-937.5"/>
         </scene>
         <!--Profile-->
         <scene sceneID="etp-Sg-kbK">
             <objects>
-                <viewController id="vyM-bV-3d8" customClass="ProfileController" customModule="Leakthis" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Profile" id="vyM-bV-3d8" customClass="ProfileController" customModule="Leakthis" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="K9D-wB-3FJ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <viewLayoutGuide key="safeArea" id="ui2-wa-2Ro"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" id="Qaa-8J-dMW"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person" catalog="system" selectedImage="person" id="Qaa-8J-dMW"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YCV-YJ-Wd7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -73,10 +97,11 @@
         <!--Navigation Controller-->
         <scene sceneID="ifg-tS-Pcr">
             <objects>
-                <navigationController id="R2M-ey-pH2" customClass="NavigationController" customModule="Leakthis" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8oP-dI-W9b">
+                <navigationController interfaceStyle="dark" id="R2M-ey-pH2" customClass="NavigationController" customModule="Leakthis" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="8oP-dI-W9b">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="fNr-zL-WSQ" kind="relationship" relationship="rootViewController" id="gk7-qS-A0D"/>
@@ -91,10 +116,13 @@
             <objects>
                 <tabBarController id="fNr-zL-WSQ" customClass="TabController" customModule="Leakthis" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="6nO-dY-D0s"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vXN-Lv-pXx">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="vXN-Lv-pXx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="ZQT-RP-xZ6" kind="relationship" relationship="viewControllers" id="fq8-cd-UHP"/>
@@ -107,4 +135,10 @@
             <point key="canvasLocation" x="1038" y="-147"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.80335828990000002" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+    <resources>
+        <image name="house" catalog="system" width="128" height="110"/>
+        <image name="person" catalog="system" width="128" height="117"/>
+        <image name="tray" catalog="system" width="128" height="88"/>
+    </resources>
 </document>
