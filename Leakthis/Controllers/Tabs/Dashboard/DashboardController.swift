@@ -77,6 +77,72 @@ class DashboardController : UIViewController {
                     ]
                 )
             ]
+        ),
+        LeakThisForum.init(
+            category: "Nothing 2",
+            description: "Nothing 2",
+            threads: [
+                LeakThisForum.ForumThread.init(
+                    title: "Test",
+                    description: "Test",
+                    thread: "Thread",
+                    latest: LeakThisForum.LatestThread.init(
+                        user: LeakThisUser.Lite.init(id: 0, name: "", avatar: ""),
+                        link: "",
+                        title: "Latest",
+                        thread_id: "id",
+                        thread_post: "Hi",
+                        created: 0,
+                        created_formatted: "Today"
+                    ),
+                    sub_forums: [
+                        LeakThisForum.SubForum.init(
+                            title: "Hello",
+                            link: "music",
+                            forum_id: "id")
+                    ]
+                ),
+                LeakThisForum.ForumThread.init(
+                    title: "Test 2",
+                    description: "Test 2",
+                    thread: "Thread",
+                    latest: LeakThisForum.LatestThread.init(
+                        user: LeakThisUser.Lite.init(id: 0, name: "", avatar: ""),
+                        link: "",
+                        title: "Latest",
+                        thread_id: "id",
+                        thread_post: "Hi",
+                        created: 0,
+                        created_formatted: "Today"
+                    ),
+                    sub_forums: [
+                        LeakThisForum.SubForum.init(
+                            title: "Hello",
+                            link: "music",
+                            forum_id: "id")
+                    ]
+                ),
+                LeakThisForum.ForumThread.init(
+                    title: "Test 3",
+                    description: "Test 3",
+                    thread: "Thread",
+                    latest: LeakThisForum.LatestThread.init(
+                        user: LeakThisUser.Lite.init(id: 0, name: "", avatar: ""),
+                        link: "",
+                        title: "Latest",
+                        thread_id: "id",
+                        thread_post: "Hi",
+                        created: 0,
+                        created_formatted: "Today"
+                    ),
+                    sub_forums: [
+                        LeakThisForum.SubForum.init(
+                            title: "Hello",
+                            link: "music",
+                            forum_id: "id")
+                    ]
+                )
+            ]
         )
     ]
     

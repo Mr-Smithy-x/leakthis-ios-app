@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1786C98C2544F63400AFFD1B /* UITextFieldPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1786C98B2544F63400AFFD1B /* UITextFieldPadding.swift */; };
+		1786C98F2544FF6F00AFFD1B /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1786C98E2544FF6F00AFFD1B /* UIView+Extension.swift */; };
+		1786C9912545026300AFFD1B /* UIViewWithKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1786C9902545026300AFFD1B /* UIViewWithKeyboard.swift */; };
 		17AE4DD925414DCC007DDCE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AE4DD825414DCC007DDCE2 /* AppDelegate.swift */; };
 		17AE4DDB25414DCC007DDCE2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AE4DDA25414DCC007DDCE2 /* SceneDelegate.swift */; };
 		17AE4DDD25414DCC007DDCE2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AE4DDC25414DCC007DDCE2 /* ViewController.swift */; };
@@ -53,6 +56,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1786C98B2544F63400AFFD1B /* UITextFieldPadding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldPadding.swift; sourceTree = "<group>"; };
+		1786C98E2544FF6F00AFFD1B /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		1786C9902545026300AFFD1B /* UIViewWithKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewWithKeyboard.swift; sourceTree = "<group>"; };
 		17AE4DD525414DCC007DDCE2 /* Leakthis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Leakthis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17AE4DD825414DCC007DDCE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17AE4DDA25414DCC007DDCE2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +118,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1786C98D2544FF3D00AFFD1B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1786C98E2544FF6F00AFFD1B /* UIView+Extension.swift */,
+				1786C9902545026300AFFD1B /* UIViewWithKeyboard.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		17AE4DCC25414DCC007DDCE2 = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +150,8 @@
 		17AE4DD725414DCC007DDCE2 /* Leakthis */ = {
 			isa = PBXGroup;
 			children = (
+				1786C98D2544FF3D00AFFD1B /* Extensions */,
+				17AE4E41254278C5007DDCE2 /* Views */,
 				17AE4E282541DE9A007DDCE2 /* Cells */,
 				17AE4E1925415893007DDCE2 /* Controllers */,
 				17AE4E0B25414DE3007DDCE2 /* Models */,
@@ -262,6 +279,22 @@
 			path = Responses;
 			sourceTree = "<group>";
 		};
+		17AE4E41254278C5007DDCE2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				17AE4E42254278D0007DDCE2 /* Profile */,
+				1786C98B2544F63400AFFD1B /* UITextFieldPadding.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		17AE4E42254278D0007DDCE2 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -325,7 +358,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1160;
-				LastUpgradeCheck = 1160;
+				LastUpgradeCheck = 1230;
 				ORGANIZATIONNAME = "Charlton Smith";
 				TargetAttributes = {
 					17AE4DD425414DCC007DDCE2 = {
@@ -409,7 +442,10 @@
 				17AE4E25254159A7007DDCE2 /* ProfileController.swift in Sources */,
 				17AE4DE325414DCC007DDCE2 /* Leakthis.xcdatamodeld in Sources */,
 				17AE4DDB25414DCC007DDCE2 /* SceneDelegate.swift in Sources */,
+				1786C98C2544F63400AFFD1B /* UITextFieldPadding.swift in Sources */,
+				1786C98F2544FF6F00AFFD1B /* UIView+Extension.swift in Sources */,
 				17AE4E232541599C007DDCE2 /* InboxController.swift in Sources */,
+				1786C9912545026300AFFD1B /* UIViewWithKeyboard.swift in Sources */,
 				17AE4E4025423F11007DDCE2 /* LeakThisPagination.swift in Sources */,
 				17AE4E1425414FF7007DDCE2 /* LeakThisProfile.swift in Sources */,
 				17AE4E16254150B5007DDCE2 /* LeakThisForum.swift in Sources */,
@@ -494,6 +530,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -518,7 +555,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -554,6 +591,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -572,7 +610,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

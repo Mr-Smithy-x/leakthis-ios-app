@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="R2M-ey-pH2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="R2M-ey-pH2">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -11,16 +12,119 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Leakthis" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="UIViewWithKeyboard" customModule="Leakthis" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LfI-KK-Sc8" customClass="UITextFieldPadding" customModule="Leakthis" customModuleProvider="target">
+                                <rect key="frame" x="50" y="381.5" width="314" height="45"/>
+                                <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="vl6-jn-Mr0"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" keyboardAppearance="alert" returnKeyType="next" textContentType="email"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="padding">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZIC-0M-Ksh" customClass="UITextFieldPadding" customModule="Leakthis" customModuleProvider="target">
+                                <rect key="frame" x="50" y="436.5" width="314" height="45"/>
+                                <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Kba-7g-yM3"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
+                            </textField>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mf7-no-Ope">
+                                <rect key="frame" x="50" y="491.5" width="314" height="50"/>
+                                <color key="backgroundColor" red="0.80335828990000002" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="qdk-Ye-bzH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="17"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Sign In"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.ccrnerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="fNr-zL-WSQ" kind="show" id="gRJ-6k-nhZ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login to LeakThis" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hpe-Wr-gS9">
+                                <rect key="frame" x="50" y="349.5" width="136" height="24"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oos-s9-ms5">
+                                <rect key="frame" x="141" y="188" width="132.5" height="131.5"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="LEAK">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <font key="NSFont" size="48" name="AvenirNext-Heavy"/>
+                                            <font key="NSOriginalFont" size="36" name="AvenirNext-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <font key="NSFont" size="48" name="AvenirNext-Heavy"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="TH.IS">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.49846647982336312" blue="0.49469967705727724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="48" name="AvenirNext-Heavy"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="viewFlipsideBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mf7-no-Ope" secondAttribute="trailing" constant="50" id="0Qx-iX-eDE"/>
+                            <constraint firstItem="LfI-KK-Sc8" firstAttribute="top" secondItem="Hpe-Wr-gS9" secondAttribute="bottom" constant="8" id="3bR-Bg-e6p"/>
+                            <constraint firstItem="Hpe-Wr-gS9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="ATL-wM-CK4"/>
+                            <constraint firstItem="Hpe-Wr-gS9" firstAttribute="top" secondItem="oos-s9-ms5" secondAttribute="bottom" constant="30" id="DIw-Z7-1SX"/>
+                            <constraint firstItem="oos-s9-ms5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Eo3-2o-K97"/>
+                            <constraint firstItem="mf7-no-Ope" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="OTc-zN-lbs"/>
+                            <constraint firstItem="mf7-no-Ope" firstAttribute="top" secondItem="ZIC-0M-Ksh" secondAttribute="bottom" constant="10" id="Ow7-PC-oh6"/>
+                            <constraint firstItem="ZIC-0M-Ksh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="RVx-TE-lVo"/>
+                            <constraint firstItem="LfI-KK-Sc8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vhx-X1-IEw"/>
+                            <constraint firstItem="ZIC-0M-Ksh" firstAttribute="top" secondItem="LfI-KK-Sc8" secondAttribute="bottom" constant="10" id="Wck-wD-dnH"/>
+                            <constraint firstItem="LfI-KK-Sc8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="ZNb-rE-0uu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZIC-0M-Ksh" secondAttribute="trailing" constant="50" id="drS-Cm-HHh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LfI-KK-Sc8" secondAttribute="trailing" constant="50" id="feH-Qv-Vdh"/>
+                            <constraint firstItem="LfI-KK-Sc8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="kPV-WU-V1k"/>
+                            <constraint firstItem="mf7-no-Ope" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="l4u-jx-eg8"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="2bF-4g-uwb"/>
+                    <connections>
+                        <outlet property="iEmailField" destination="LfI-KK-Sc8" id="Asv-UP-i8p"/>
+                        <outlet property="iLoginBtn" destination="mf7-no-Ope" id="itd-Dx-38L"/>
+                        <outlet property="iPasswordField" destination="ZIC-0M-Ksh" id="ZX4-bo-Mzl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-712" y="-147"/>
+            <point key="canvasLocation" x="539" y="-145"/>
         </scene>
         <!--Inbox-->
         <scene sceneID="vON-aN-0SO">
@@ -29,8 +133,8 @@
                     <view key="view" contentMode="scaleToFill" id="idO-0M-hB6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <viewLayoutGuide key="safeArea" id="PVD-5j-a9A"/>
+                        <color key="backgroundColor" systemColor="viewFlipsideBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Inbox" image="tray" catalog="system" selectedImage="tray" id="pZl-WP-0Dn">
                         <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -51,21 +155,21 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PgQ-xw-BZK">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                                 <color key="backgroundColor" red="0.063892988809999995" green="0.068139688150000002" blue="0.074909021359999994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="separatorColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="separatorColor" systemColor="systemGray6Color"/>
                                 <connections>
                                     <outlet property="dataSource" destination="ZQT-RP-xZ6" id="Uff-4g-Ic9"/>
                                     <outlet property="delegate" destination="ZQT-RP-xZ6" id="uhl-5N-Eo8"/>
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <viewLayoutGuide key="safeArea" id="qfw-dV-CfZ"/>
+                        <color key="backgroundColor" systemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="PgQ-xw-BZK" firstAttribute="centerX" secondItem="9At-Nl-Gp9" secondAttribute="centerX" id="bZr-ah-ryu"/>
                             <constraint firstItem="PgQ-xw-BZK" firstAttribute="bottom" secondItem="qfw-dV-CfZ" secondAttribute="bottom" id="gFl-rn-fdf"/>
                             <constraint firstItem="PgQ-xw-BZK" firstAttribute="leading" secondItem="qfw-dV-CfZ" secondAttribute="leading" id="hja-GI-75l"/>
                             <constraint firstItem="PgQ-xw-BZK" firstAttribute="top" secondItem="qfw-dV-CfZ" secondAttribute="top" id="kac-Ff-Fdb"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="qfw-dV-CfZ"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Dashboard" image="house" catalog="system" selectedImage="house" id="T4g-FP-MuG">
                         <color key="badgeColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -85,43 +189,69 @@
                     <view key="view" contentMode="scaleToFill" id="K9D-wB-3FJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="bK0-tN-Owy">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Cz-3G-uhb">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="149"/>
+                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BCa-xw-ehS">
+                                        <rect key="frame" x="0.0" y="149" width="414" height="288.5"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YNb-1f-Suc">
+                                        <rect key="frame" x="0.0" y="437.5" width="414" height="287.5"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ui2-wa-2Ro"/>
+                        <color key="backgroundColor" systemColor="viewFlipsideBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bK0-tN-Owy" firstAttribute="leading" secondItem="ui2-wa-2Ro" secondAttribute="leading" id="7Dd-if-dbC"/>
+                            <constraint firstItem="bK0-tN-Owy" firstAttribute="centerX" secondItem="K9D-wB-3FJ" secondAttribute="centerX" id="K6c-Qc-JEV"/>
+                            <constraint firstItem="bK0-tN-Owy" firstAttribute="bottom" secondItem="ui2-wa-2Ro" secondAttribute="bottom" id="PgL-bR-KiB"/>
+                            <constraint firstItem="bK0-tN-Owy" firstAttribute="top" secondItem="ui2-wa-2Ro" secondAttribute="top" id="yjB-CO-gx2"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="person" catalog="system" selectedImage="person" id="Qaa-8J-dMW"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YCV-YJ-Wd7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2712" y="350"/>
+            <point key="canvasLocation" x="2711.594202898551" y="349.55357142857139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ifg-tS-Pcr">
             <objects>
                 <navigationController interfaceStyle="dark" id="R2M-ey-pH2" customClass="NavigationController" customModule="Leakthis" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="pMS-v6-iQJ"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="8oP-dI-W9b">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" systemColor="systemGray6Color"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="fNr-zL-WSQ" kind="relationship" relationship="rootViewController" id="gk7-qS-A0D"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ZZv-Zp-WM1"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="prZ-Du-BeL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="255" y="-147"/>
+            <point key="canvasLocation" x="-243" y="-145"/>
         </scene>
         <!--Tab Controller-->
         <scene sceneID="RgK-BY-hQl">
             <objects>
                 <tabBarController id="fNr-zL-WSQ" customClass="TabController" customModule="Leakthis" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="6nO-dY-D0s"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="6nO-dY-D0s"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="vXN-Lv-pXx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="barTintColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" systemColor="systemRedColor"/>
+                        <color key="barTintColor" systemColor="systemGray6Color"/>
                         <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
@@ -132,13 +262,42 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J9t-QT-5Gn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1038" y="-147"/>
+            <point key="canvasLocation" x="1401" y="-145"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="LfI-KK-Sc8">
+            <size key="intrinsicContentSize" width="100" height="34"/>
+        </designable>
+        <designable name="ZIC-0M-Ksh">
+            <size key="intrinsicContentSize" width="132" height="34"/>
+        </designable>
+    </designables>
     <color key="tintColor" red="0.80335828990000002" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
-        <image name="house" catalog="system" width="128" height="110"/>
+        <image name="house" catalog="system" width="128" height="106"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="tray" catalog="system" width="128" height="88"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="viewFlipsideBackgroundColor">
+            <color red="0.1215686274509804" green="0.12941176470588239" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>
