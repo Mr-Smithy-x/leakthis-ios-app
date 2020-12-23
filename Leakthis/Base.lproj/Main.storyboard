@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Leakthis" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController interfaceStyle="dark" id="BYZ-38-t0r" customClass="ViewController" customModule="Leakthis" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="UIViewWithKeyboard" customModule="Leakthis" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -152,10 +152,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PgQ-xw-BZK">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
-                                <color key="backgroundColor" red="0.063892988809999995" green="0.068139688150000002" blue="0.074909021359999994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="always" indicatorStyle="black" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="250" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PgQ-xw-BZK">
+                                <rect key="frame" x="20" y="0.0" width="374" height="725"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <color key="separatorColor" systemColor="systemGray6Color"/>
+                                <color key="sectionIndexBackgroundColor" systemColor="systemGray6Color"/>
+                                <color key="sectionIndexTrackingBackgroundColor" systemColor="systemGray6Color"/>
+                                <sections/>
                                 <connections>
                                     <outlet property="dataSource" destination="ZQT-RP-xZ6" id="Uff-4g-Ic9"/>
                                     <outlet property="delegate" destination="ZQT-RP-xZ6" id="uhl-5N-Eo8"/>
@@ -167,7 +170,7 @@
                         <constraints>
                             <constraint firstItem="PgQ-xw-BZK" firstAttribute="centerX" secondItem="9At-Nl-Gp9" secondAttribute="centerX" id="bZr-ah-ryu"/>
                             <constraint firstItem="PgQ-xw-BZK" firstAttribute="bottom" secondItem="qfw-dV-CfZ" secondAttribute="bottom" id="gFl-rn-fdf"/>
-                            <constraint firstItem="PgQ-xw-BZK" firstAttribute="leading" secondItem="qfw-dV-CfZ" secondAttribute="leading" id="hja-GI-75l"/>
+                            <constraint firstItem="PgQ-xw-BZK" firstAttribute="leading" secondItem="qfw-dV-CfZ" secondAttribute="leading" constant="20" id="hja-GI-75l"/>
                             <constraint firstItem="PgQ-xw-BZK" firstAttribute="top" secondItem="qfw-dV-CfZ" secondAttribute="top" id="kac-Ff-Fdb"/>
                         </constraints>
                     </view>
@@ -244,7 +247,7 @@
         <!--Tab Controller-->
         <scene sceneID="RgK-BY-hQl">
             <objects>
-                <tabBarController id="fNr-zL-WSQ" customClass="TabController" customModule="Leakthis" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController interfaceStyle="dark" id="fNr-zL-WSQ" customClass="TabController" customModule="Leakthis" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="6nO-dY-D0s"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="vXN-Lv-pXx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>

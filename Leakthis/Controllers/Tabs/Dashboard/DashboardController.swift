@@ -148,14 +148,13 @@ class DashboardController : UIViewController {
     
     @IBOutlet weak var iTableView: UITableView!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let nib = UINib.init(nibName: "ForumViewCell", bundle: nil)
         self.iTableView.register(nib, forCellReuseIdentifier: "ForumViewCell")
-        self.iTableView.rowHeight = UITableView.automaticDimension
-        self.iTableView.estimatedRowHeight = 600
-        iTableView.reloadData()
     }
+    
 }
 
 
@@ -175,16 +174,8 @@ extension DashboardController: UITableViewDelegate, UITableViewDataSource {
             cell.iForumSectionDescription.text = forum.description
             cell.setSection(forum: forum)
             return cell
-        }else{
-            print("FAILED")
         }
-        
-        
-        
-        
-        //cell.iForumSection.text = "Main"
-        //cell.iForumSectionDescription.text = "Here you will find news!"
-        
+        print("FAILED")
         return UITableViewCell()
     }
     
