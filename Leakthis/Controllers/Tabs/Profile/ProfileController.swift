@@ -11,8 +11,11 @@ import UIKit
 
 class ProfileController : UIViewController {
     
+    @IBOutlet weak var profileImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        profileImageView.makeRounded()
         // Do any additional setup after loading the view.
     }
 }

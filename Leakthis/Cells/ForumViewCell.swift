@@ -24,8 +24,8 @@ class ForumViewCell: UITableViewCell  {
         self.iTableView.register(nib, forCellReuseIdentifier: "ThreadForumViewCell")
         self.iTableView.dataSource = self
         self.iTableView.delegate = self
-        self.iTableView.rowHeight = UITableView.automaticDimension
-        self.iTableView.estimatedRowHeight = 600
+        //self.iTableView.rowHeight = UITableView.automaticDimension
+        //self.iTableView.estimatedRowHeight = 600
     }
 
     
